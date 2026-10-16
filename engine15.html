@@ -167,14 +167,14 @@
       </span>
     </div>
 
-    <!-- SECTION 1: CREATIVE BRIEF & ARCHETYPE -->
+    <!-- CREATIVE ARCHETYPE -->
     <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 flex flex-col gap-3 shadow-sm">
       <div class="flex items-center justify-between">
         <div>
-          <h2 class="text-xs font-black uppercase tracking-wider text-slate-800">1. Creative Brief & Archetype</h2>
-          <p class="text-[10px] text-slate-500">Structure, hierarchy, and core message intent</p>
+          <h2 class="text-xs font-bold uppercase tracking-wider text-slate-700">Creative Archetype</h2>
+          <p class="text-[10px] text-slate-500">Structure and hierarchy, not a rigid template</p>
         </div>
-        <span class="text-[10px] font-semibold text-violet-700">Step 1</span>
+        <span class="text-[10px] font-semibold text-violet-700">Planner Layer</span>
       </div>
       <select id="archetypeSelect" class="w-full bg-white border border-slate-300 text-xs rounded-lg px-2.5 py-2 outline-none focus:border-violet-500">
         <option value="auto">Auto / Balanced Editorial</option>
@@ -243,14 +243,14 @@
       </details>
     </div>
 
-    <!-- SECTION 2: GENERATION SETTINGS & DIFFUSERS PIPELINE -->
+    <!-- GENERATIVE VISUAL PIPELINE -->
     <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 flex flex-col gap-3 shadow-sm">
       <div class="flex items-center justify-between">
         <div>
-          <h2 class="text-xs font-black uppercase tracking-wider text-slate-800">2. Generation Settings & Diffusers</h2>
-          <p class="text-[10px] text-slate-500">Dedicated local GPU Hugging Face Diffusers pipeline (SD 1.5)</p>
+          <h2 class="text-xs font-bold uppercase tracking-wider text-slate-700">Generative Visual Pipeline</h2>
+          <p class="text-[10px] text-slate-500">Generates background/hero assets only. Final text, logo and product layers stay deterministic.</p>
         </div>
-        <span class="text-[10px] font-semibold text-fuchsia-700">Step 2</span>
+        <span class="text-[10px] font-semibold text-fuchsia-700">Diffusion Fallback</span>
       </div>
 
       <div class="grid grid-cols-2 gap-2">
@@ -347,14 +347,14 @@
       </details>
     </div>
 
-    <!-- SECTION 3: CUTOUT ILLUSTRATION ASSET LIBRARY (44 CURATED ARTWORKS) -->
+    <!-- CUTOUT ILLUSTRATION ASSET LIBRARY (44 CURATED ARTWORKS) -->
     <section class="bg-slate-50 border border-teal-200 rounded-2xl p-4 flex flex-col gap-3 shadow-sm" aria-label="Illustration Asset Library">
       <div class="flex items-center justify-between">
         <div>
-          <h2 class="text-xs font-black uppercase tracking-wider text-slate-800">3. Illustration Asset Library</h2>
-          <p class="text-[10px] leading-snug mt-0.5 text-slate-500">44 curated transparent cutouts • context-aware placement • layered composition</p>
+          <h2 class="text-xs font-bold uppercase tracking-wider text-slate-800">Illustration Asset Library</h2>
+          <p class="text-[10px] leading-snug mt-0.5 text-slate-500">44 transparent cutouts • context-aware placement • layered over backgrounds</p>
         </div>
-        <span class="rounded-md px-2 py-1 text-[10px] font-extrabold bg-teal-100 text-teal-800">Step 3 (44 Cutouts)</span>
+        <span class="rounded-md px-2 py-1 text-[10px] font-extrabold bg-teal-100 text-teal-800">44 ASSETS</span>
       </div>
       <div class="grid grid-cols-2 gap-2">
         <label class="text-[10px] font-semibold text-slate-600">Placement Mode
@@ -427,14 +427,10 @@
     </div>
 
     <!-- BACKGROUND IMAGERY (FILE UPLOAD & POSITIONING) -->
-    <!-- SECTION 4: COMPOSITION, STYLE & VALIDATION -->
     <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 flex flex-col gap-3">
       <div class="flex items-center justify-between">
-        <div>
-          <h2 class="text-xs font-black uppercase tracking-wider text-slate-800">4. Composition, Layout & Style</h2>
-          <p class="text-[10px] text-slate-500">Zonal protection, typographic hierarchy, and visual balance</p>
-        </div>
-        <span class="text-[10px] font-semibold text-emerald-700">Step 4</span>
+        <h2 class="text-xs font-bold uppercase tracking-wider text-slate-700">Composition & Placement</h2>
+        <span class="text-[10px] font-semibold text-emerald-700">Layout Controls</span>
       </div>
 
       <div class="grid grid-cols-2 gap-3">
@@ -672,138 +668,8 @@
       </div>
     </div>
 
-    <!-- SECTION 5: EXPORT & SEND TO OMNIPOST -->
-    <section id="omnipostIntegrationPanel" class="bg-gradient-to-br from-indigo-50/90 via-white to-slate-50 border-2 border-indigo-300 rounded-2xl p-4 flex flex-col gap-3 shadow-md">
-      <div class="flex items-center justify-between pb-2 border-b border-indigo-100">
-        <div class="flex items-center gap-2">
-          <div class="w-7 h-7 rounded-lg bg-indigo-600 text-white flex items-center justify-center font-bold text-xs shadow-sm">
-            🚀
-          </div>
-          <div>
-            <h2 class="text-xs font-black uppercase tracking-wider text-indigo-950">5. Send to OmniPost</h2>
-            <p class="text-[10px] text-slate-500 font-medium">Export creative into OmniPost Dispatcher</p>
-          </div>
-        </div>
-        <div class="flex items-center gap-1">
-          <span id="bridgeStatusBadge" class="px-2 py-0.5 rounded-full text-[9px] font-bold bg-slate-100 text-slate-600 border border-slate-200">
-            Bridge: ...
-          </span>
-          <span id="omniStatusBadge" class="px-2 py-0.5 rounded-full text-[9px] font-bold bg-slate-100 text-slate-600 border border-slate-200">
-            OmniPost: ...
-          </span>
-        </div>
-      </div>
-
-      <!-- Live Creative Summary Card -->
-      <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200 text-[11px] flex items-center justify-between">
-        <div>
-          <span class="text-slate-500 block text-[9px] uppercase font-bold">Approved Asset</span>
-          <span id="omniCreativeSummary" class="font-bold text-slate-800">Master Canvas PNG</span>
-        </div>
-        <div class="text-right">
-          <span class="text-slate-500 block text-[9px] uppercase font-bold">Composition Score</span>
-          <span id="omniCompositionScoreBadge" class="font-extrabold text-indigo-700 bg-indigo-100 px-2 py-0.5 rounded border border-indigo-200 text-[10px]">-- / 100</span>
-        </div>
-      </div>
-
-      <!-- Target Platforms Selection -->
-      <div>
-        <label class="text-[10px] font-bold uppercase tracking-wider text-slate-700 block mb-1.5">Target Platforms</label>
-        <div class="grid grid-cols-2 gap-1.5 text-[11px] font-semibold text-slate-700">
-          <label class="flex items-center gap-1.5 p-1.5 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 cursor-pointer">
-            <input type="checkbox" id="omniPlatformLinkedIn" checked class="accent-indigo-600 rounded">
-            <span>LinkedIn</span>
-          </label>
-          <label class="flex items-center gap-1.5 p-1.5 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 cursor-pointer">
-            <input type="checkbox" id="omniPlatformFacebook" checked class="accent-indigo-600 rounded">
-            <span>Facebook</span>
-          </label>
-          <label class="flex items-center gap-1.5 p-1.5 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 cursor-pointer">
-            <input type="checkbox" id="omniPlatformInstagram" checked class="accent-indigo-600 rounded">
-            <span>Instagram</span>
-          </label>
-          <label class="flex items-center gap-1.5 p-1.5 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 cursor-pointer">
-            <input type="checkbox" id="omniPlatformTwitter" class="accent-indigo-600 rounded">
-            <span>X (Twitter)</span>
-          </label>
-        </div>
-      </div>
-
-      <!-- Mode Selection (Draft vs Dispatch) -->
-      <div>
-        <label class="text-[10px] font-bold uppercase tracking-wider text-slate-700 block mb-1.5">OmniPost Action Mode</label>
-        <div class="grid grid-cols-2 gap-2 text-[10px] font-semibold">
-          <label class="flex items-center gap-1.5 p-2 rounded-lg border border-indigo-300 bg-indigo-50/60 cursor-pointer text-indigo-950">
-            <input type="radio" name="omniModeSelect" value="draft" checked class="accent-indigo-600">
-            <div>
-              <p class="font-bold">Create Draft</p>
-              <p class="text-[9px] text-indigo-700 font-normal">Review & Schedule in OmniPost</p>
-            </div>
-          </label>
-          <label class="flex items-center gap-1.5 p-2 rounded-lg border border-slate-200 bg-white cursor-pointer text-slate-800">
-            <input type="radio" name="omniModeSelect" value="publish_now" class="accent-indigo-600">
-            <div>
-              <p class="font-bold">Dispatch Now</p>
-              <p class="text-[9px] text-slate-500 font-normal">Publish to selected feeds</p>
-            </div>
-          </label>
-        </div>
-      </div>
-
-      <!-- Caption Content Field with Auto-Sync -->
-      <div>
-        <div class="flex items-center justify-between mb-1">
-          <label for="omniCaptionField" class="text-[10px] font-bold uppercase tracking-wider text-slate-700">Post Caption / Copy</label>
-          <button id="omniSyncBriefBtn" type="button" class="text-[9px] font-bold text-indigo-600 hover:text-indigo-800">↻ Sync from Brief</button>
-        </div>
-        <textarea id="omniCaptionField" rows="2" class="w-full bg-white border border-slate-300 text-xs rounded-lg p-2 focus:border-indigo-500 outline-none" placeholder="Captions, headlines, hashtags..."></textarea>
-      </div>
-
-      <!-- MANDATORY APPROVAL STEP -->
-      <div class="p-2.5 rounded-xl bg-amber-50 border border-amber-300 flex items-start gap-2.5 text-amber-950">
-        <input type="checkbox" id="omniApprovalCheckbox" class="mt-0.5 accent-amber-600 w-4 h-4 cursor-pointer">
-        <label for="omniApprovalCheckbox" class="text-[11px] font-bold cursor-pointer select-none leading-snug">
-          I approve this final creative and composition for publishing to OmniPost.
-          <span class="block text-[9px] font-normal text-amber-800 mt-0.5">Mandatory safeguard. Prevents unvalidated or draft assets from reaching the dispatcher.</span>
-        </label>
-      </div>
-
-      <!-- ACTION BUTTONS -->
-      <div class="flex flex-col gap-2">
-        <button
-          id="sendToOmniPostActionBtn"
-          type="button"
-          disabled
-          class="w-full py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white font-extrabold text-xs shadow-lg transition flex items-center justify-center gap-2"
-        >
-          <span>🚀</span> Send to OmniPost
-        </button>
-      </div>
-
-      <!-- FEEDBACK / STATUS BOX -->
-      <div id="omniTransferStatusBox" class="hidden rounded-xl p-3 text-xs flex flex-col gap-2 transition-all"></div>
-
-      <!-- BRIDGE & ADVANCED SETTINGS -->
-      <details class="text-[10px] text-slate-600 pt-1 border-t border-slate-200">
-        <summary class="cursor-pointer font-bold text-slate-500 hover:text-slate-800">OmniPost Integration Settings</summary>
-        <div class="mt-2 space-y-2 p-2.5 bg-slate-50 rounded-lg border border-slate-200">
-          <div>
-            <label class="block text-[9px] font-semibold text-slate-500">Bridge Service URL</label>
-            <input id="bridgeServiceUrlInput" type="text" value="http://127.0.0.1:8001" class="w-full bg-white border border-slate-300 text-[10px] font-mono rounded px-2 py-1">
-          </div>
-          <div>
-            <label class="block text-[9px] font-semibold text-slate-500">OmniPost Web Dashboard URL</label>
-            <input id="omnipostWebUrlInput" type="text" value="http://127.0.0.1:8002" class="w-full bg-white border border-slate-300 text-[10px] font-mono rounded px-2 py-1">
-          </div>
-          <button id="checkBridgeConnBtn" type="button" class="w-full py-1 text-[9px] font-bold bg-white border border-slate-300 rounded hover:bg-slate-100">
-            Refresh Connection Status
-          </button>
-        </div>
-      </details>
-    </section>
-
     <!-- EXPORT & RENDER -->
-    <div class="grid grid-cols-2 gap-3 mt-2">
+    <div class="grid grid-cols-2 gap-3 mt-auto">
       <button 
         id="reRenderBtn" 
         class="py-3 rounded-xl font-bold text-xs bg-slate-100 hover:bg-slate-200 border border-slate-300 transition flex items-center justify-center gap-1.5"
@@ -828,27 +694,6 @@
 
       <div class="w-full min-h-[540px] rounded-3xl bg-white border border-slate-200 p-4 lg:p-8 flex items-center justify-center shadow-2xl">
         <canvas id="previewCanvas" class="rounded-xl shadow-xl ring-1 ring-slate-200"></canvas>
-      </div>
-
-      <!-- Quick Canvas Action Bar -->
-      <div class="w-full bg-white/90 backdrop-blur border border-slate-200 rounded-2xl p-4 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
-        <div class="flex items-center gap-3">
-          <div class="w-8 h-8 rounded-lg bg-indigo-50 border border-indigo-200 flex items-center justify-center text-indigo-600 font-bold">
-            ✨
-          </div>
-          <div>
-            <div class="font-bold text-slate-800 flex items-center gap-2">
-              <span>Ready for OmniPost Workflow</span>
-              <span id="canvasScorePill" class="text-[10px] font-extrabold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full border border-emerald-200">Score: 85/100</span>
-            </div>
-            <p class="text-[11px] text-slate-500">Preview validated. Check approval in panel to send media into OmniPost.</p>
-          </div>
-        </div>
-        <div class="flex items-center gap-2 shrink-0">
-          <button type="button" onclick="document.getElementById('omnipostIntegrationPanel').scrollIntoView({ behavior: 'smooth' })" class="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs shadow transition">
-            Send to OmniPost ↗
-          </button>
-        </div>
       </div>
     </div>
   </main>
@@ -3783,12 +3628,6 @@ function updateScoreUI(score, candidates = null) {
       score.grade === "RELAYOUT" ? "text-amber-700" : "text-rose-700"
     );
   }
-  const omniScoreBadge = $("omniCompositionScoreBadge");
-  if (omniScoreBadge) omniScoreBadge.textContent = `${Math.round(score.total)} / 100`;
-  const canvasPill = $("canvasScorePill");
-  if (canvasPill) canvasPill.textContent = `Score: ${Math.round(score.total)}/100`;
-  const creativeSummary = $("omniCreativeSummary");
-  if (creativeSummary && currentDesign) creativeSummary.textContent = `${capitalize(currentDesign.archetypeKey || 'Creative')} (${canvasW}×${canvasH})`;
   if (breakdown) {
     const labels = {
       textFit: "Text fit",
@@ -4398,266 +4237,6 @@ document.querySelectorAll(".preset-btn").forEach(button => {
   });
 });
 
-/* =========================================================
-   OMNIPOST DISPATCHER INTEGRATION ADAPTER
-========================================================= */
-
-let bridgeServiceBaseUrl = "http://127.0.0.1:8001";
-let omnipostAppBaseUrl = "http://127.0.0.1:8002";
-let lastTransferredPostData = null;
-
-async function getExportMasterBlob() {
-  await document.fonts.ready;
-  const exportSpec = collectCreativeSpec();
-  let exportScene = resolveScene(exportSpec, { regenerate: false });
-  if (exportSpec.preferences.layout === "auto" && !exportSpec.locks.layout) {
-    exportScene = chooseBestComposition(exportSpec, exportScene).best.scene;
-  }
-  const exportCanvas = document.createElement("canvas");
-  exportCanvas.width = exportSpec.dimensions.width;
-  exportCanvas.height = exportSpec.dimensions.height;
-  const exportCtx = exportCanvas.getContext("2d", { alpha: false });
-  const exportReport = renderLogicalCanvas(exportCtx, exportScene);
-  const exportScore = computeCompositionScore(exportScene, exportReport);
-  updateScoreUI(exportScore);
-
-  const scoreBadge = $("omniCompositionScoreBadge");
-  if (scoreBadge) scoreBadge.textContent = `${Math.round(exportScore.total)} / 100`;
-  const pill = $("canvasScorePill");
-  if (pill) pill.textContent = `Score: ${Math.round(exportScore.total)}/100`;
-
-  if (!exportReport.ok || exportScore.total < 70) {
-    lastRenderReport = exportReport;
-    updateEngineHealth(exportReport);
-    const reasons = exportReport.warnings.length ? exportReport.warnings.join(" | ") : `Composition score ${Math.round(exportScore.total)}/100 is below the threshold.`;
-    throw new Error("Validation check failed: " + reasons);
-  }
-
-  return new Promise((resolve, reject) => {
-    try {
-      exportCanvas.toBlob(blob => {
-        if (!blob) {
-          reject(new Error("Failed to render canvas to PNG blob"));
-        } else {
-          resolve({
-            blob,
-            exportSpec,
-            exportScene,
-            exportScore,
-            exportReport,
-            width: exportCanvas.width,
-            height: exportCanvas.height
-          });
-        }
-      }, "image/png", 1);
-    } catch (err) {
-      reject(err);
-    }
-  });
-}
-
-function syncOmniCaptionFromBrief() {
-  const spec = collectCreativeSpec();
-  const headline = stripRichMarkers(spec.copy.headline);
-  const subheading = spec.copy.subheading;
-  const concept = spec.generative?.concept || "";
-  const parts = [];
-  if (headline) parts.push(headline);
-  if (subheading) parts.push(subheading);
-  if (concept) parts.push(`Concept: ${concept}`);
-  parts.push("#OmniPost #CreativeEngine #GenerativeAI");
-  const captionEl = $("omniCaptionField");
-  if (captionEl) captionEl.value = parts.join("\n\n");
-}
-
-async function checkOmniPostBridgeStatus() {
-  const bridgeUrlInput = $("bridgeServiceUrlInput");
-  if (bridgeUrlInput && bridgeUrlInput.value.trim()) {
-    bridgeServiceBaseUrl = bridgeUrlInput.value.trim().replace(/\/+$/, "");
-  }
-  const omniUrlInput = $("omnipostWebUrlInput");
-  if (omniUrlInput && omniUrlInput.value.trim()) {
-    omnipostAppBaseUrl = omniUrlInput.value.trim().replace(/\/+$/, "");
-  }
-
-  const bridgeBadge = $("bridgeStatusBadge");
-  const omniBadge = $("omniStatusBadge");
-
-  try {
-    const res = await fetch(`${bridgeServiceBaseUrl}/api/bridge/status`, { mode: "cors" });
-    if (res.ok) {
-      const data = await res.json();
-      if (bridgeBadge) {
-        bridgeBadge.className = "px-2 py-0.5 rounded-full text-[9px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300";
-        bridgeBadge.textContent = "Bridge: ONLINE";
-      }
-      if (omniBadge) {
-        if (data.omnipost?.status === "CONNECTED") {
-          omniBadge.className = "px-2 py-0.5 rounded-full text-[9px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300";
-          omniBadge.textContent = "OmniPost: CONNECTED";
-        } else {
-          omniBadge.className = "px-2 py-0.5 rounded-full text-[9px] font-bold bg-amber-100 text-amber-800 border border-amber-300";
-          omniBadge.textContent = "OmniPost: WAITING";
-        }
-      }
-    } else {
-      throw new Error(`HTTP ${res.status}`);
-    }
-  } catch (err) {
-    if (bridgeBadge) {
-      bridgeBadge.className = "px-2 py-0.5 rounded-full text-[9px] font-bold bg-rose-100 text-rose-800 border border-rose-300";
-      bridgeBadge.textContent = "Bridge: OFFLINE";
-    }
-    if (omniBadge) {
-      omniBadge.className = "px-2 py-0.5 rounded-full text-[9px] font-bold bg-slate-100 text-slate-600 border border-slate-200";
-      omniBadge.textContent = "OmniPost: ?";
-    }
-  }
-}
-
-async function sendCreativeToOmniPost() {
-  const approvalBox = $("omniApprovalCheckbox");
-  if (!approvalBox || !approvalBox.checked) {
-    alert("Approval required: Please review and check the approval checkbox before sending to OmniPost.");
-    return;
-  }
-
-  const statusBox = $("omniTransferStatusBox");
-  const sendBtn = $("sendToOmniPostActionBtn");
-
-  if (sendBtn) {
-    sendBtn.disabled = true;
-    sendBtn.innerHTML = `<span>⏳</span> Transferring to OmniPost...`;
-  }
-
-  if (statusBox) {
-    statusBox.classList.remove("hidden");
-    statusBox.className = "rounded-xl p-3 text-xs flex flex-col gap-2 bg-indigo-50 border border-indigo-200 text-indigo-900";
-    statusBox.innerHTML = `
-      <div class="flex items-center gap-2">
-        <span class="w-3 h-3 border-2 border-indigo-600 border-t-transparent rounded-full animate-spin"></span>
-        <span class="font-bold">Rendering Master Canvas & Uploading to Bridge...</span>
-      </div>
-      <p class="text-[10px] text-indigo-700">Encoding high-resolution asset, verifying zones, and dispatching to OmniPost.</p>
-    `;
-  }
-
-  try {
-    // 1. Get high-resolution master blob
-    const { blob, exportSpec, exportScene, exportScore, width, height } = await getExportMasterBlob();
-
-    // 2. Convert blob to Base64
-    const base64Data = await new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.onloadend = () => resolve(reader.result);
-      reader.onerror = reject;
-      reader.readAsDataURL(blob);
-    });
-
-    // 3. Collect selected platforms
-    const platforms = [];
-    if ($("omniPlatformLinkedIn")?.checked) platforms.push("LINKEDIN");
-    if ($("omniPlatformFacebook")?.checked) platforms.push("FACEBOOK");
-    if ($("omniPlatformInstagram")?.checked) platforms.push("INSTAGRAM");
-    if ($("omniPlatformTwitter")?.checked) platforms.push("TWITTER");
-    if (platforms.length === 0) platforms.push("LINKEDIN");
-
-    // 4. Publish mode
-    const modeInputs = document.getElementsByName("omniModeSelect");
-    let publishNow = false;
-    for (const input of modeInputs) {
-      if (input.checked && input.value === "publish_now") publishNow = true;
-    }
-
-    const caption = ($("omniCaptionField")?.value || "").trim();
-
-    const payload = {
-      image_base64: base64Data,
-      mime_type: "image/png",
-      approved: true,
-      title: `Creative: ${stripRichMarkers(exportSpec.copy.headline) || 'Social Campaign'}`,
-      headline: stripRichMarkers(exportSpec.copy.headline),
-      concept: exportSpec.generative?.concept || "",
-      content: caption || undefined,
-      platforms: platforms,
-      publish_now: publishNow,
-      metadata: {
-        width,
-        height,
-        score: Math.round(exportScore.total),
-        archetype: exportScene.compositionPlan?.archetypeKey
-      }
-    };
-
-    // 5. Send to Bridge Endpoint
-    const res = await fetch(`${bridgeServiceBaseUrl}/api/bridge/transfer`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload)
-    });
-
-    const data = await res.json();
-
-    if (!res.ok || !data.success) {
-      const errMsg = data.detail || data.omnipost_error || `Transfer failed with HTTP ${res.status}`;
-      throw new Error(errMsg);
-    }
-
-    lastTransferredPostData = data;
-    setStatus("SENT TO OMNIPOST", "green");
-
-    const omniPostLink = data.handoff_url || `${omnipostAppBaseUrl}/`;
-
-    if (statusBox) {
-      statusBox.className = "rounded-xl p-3 text-xs flex flex-col gap-2 bg-emerald-50 border border-emerald-300 text-emerald-950 shadow-sm";
-      statusBox.innerHTML = `
-        <div class="flex items-center justify-between">
-          <span class="font-extrabold text-emerald-800 flex items-center gap-1.5">
-            <span>✅</span> Transferred Successfully!
-          </span>
-          <span class="font-mono text-[10px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-bold">
-            ${data.omnipost_status || 'CREATED'}
-          </span>
-        </div>
-        <div class="text-[11px] space-y-1">
-          <p><span class="font-semibold text-slate-600">OmniPost ID:</span> <span class="font-mono font-bold">${data.omnipost_post_id || 'Saved in Bridge'}</span></p>
-          <p><span class="font-semibold text-slate-600">Hosted Media:</span> <a href="${data.media_url}" target="_blank" class="text-indigo-600 underline font-mono text-[10px] truncate block max-w-xs">${data.media_url}</a></p>
-          <p><span class="font-semibold text-slate-600">Channels:</span> ${platforms.join(", ")}</p>
-        </div>
-        <div class="flex items-center gap-2 pt-2 border-t border-emerald-200">
-          <a href="${omniPostLink}" target="_blank" class="flex-1 py-2 px-3 rounded-lg bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-center text-xs shadow-sm transition">
-            Open in OmniPost ↗
-          </a>
-          <button type="button" onclick="navigator.clipboard.writeText('${data.media_url}'); alert('Media URL copied to clipboard!');" class="py-2 px-2.5 rounded-lg bg-white border border-slate-300 hover:bg-slate-50 text-[10px] font-bold text-slate-700">
-            Copy URL
-          </button>
-        </div>
-      `;
-    }
-
-  } catch (err) {
-    console.error("OmniPost Transfer Error:", err);
-    setStatus("TRANSFER ERROR", "amber");
-    if (statusBox) {
-      statusBox.className = "rounded-xl p-3 text-xs flex flex-col gap-2 bg-rose-50 border border-rose-300 text-rose-950";
-      statusBox.innerHTML = `
-        <div class="flex items-center gap-1.5 font-bold text-rose-800">
-          <span>❌</span> Transfer Failed
-        </div>
-        <p class="text-[11px] leading-relaxed text-rose-900">${escapeHtml(err.message)}</p>
-        <button type="button" onclick="sendCreativeToOmniPost()" class="w-full py-1.5 mt-1 rounded-lg bg-rose-700 hover:bg-rose-800 text-white font-bold text-[10px]">
-          Retry Transfer
-        </button>
-      `;
-    }
-  } finally {
-    if (sendBtn) {
-      sendBtn.disabled = !($("omniApprovalCheckbox")?.checked);
-      sendBtn.innerHTML = `<span>🚀</span> Send to OmniPost`;
-    }
-  }
-}
-
 window.addEventListener("DOMContentLoaded", async () => {
   activeLibraryCategory = "all";
   renderImageLibrary(activeLibraryCategory);
@@ -4675,18 +4254,6 @@ window.addEventListener("DOMContentLoaded", async () => {
   schedulePreviewRender();
   buildAndPreviewGenerativePrompt();
   setStatus("PROCEDURAL", "amber");
-
-  // Wire OmniPost Bridge Listeners
-  $("sendToOmniPostActionBtn")?.addEventListener("click", sendCreativeToOmniPost);
-  $("omniApprovalCheckbox")?.addEventListener("change", (e) => {
-    const btn = $("sendToOmniPostActionBtn");
-    if (btn) btn.disabled = !e.target.checked;
-  });
-  $("omniSyncBriefBtn")?.addEventListener("click", syncOmniCaptionFromBrief);
-  $("checkBridgeConnBtn")?.addEventListener("click", checkOmniPostBridgeStatus);
-  checkOmniPostBridgeStatus();
-  syncOmniCaptionFromBrief();
-  setInterval(checkOmniPostBridgeStatus, 6000);
 });
 </script>
 
