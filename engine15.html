@@ -2573,7 +2573,9 @@ registerGenerativeProvider("mock", {
 ========================================================= */
 
 const CONNECT_TO_HARDWARE = true; // Connected to local diffuser backend
-const HARDWARE_GPU_ENDPOINT = "http://127.0.0.1:8000/generate";
+const HARDWARE_GPU_ENDPOINT = (window.location.protocol.startsWith("http")) 
+  ? `${window.location.origin}/generate` 
+  : "http://127.0.0.1:8000/generate";
 registerGenerativeProvider("hf_inference", {
   label: "Dedicated Local GPU",
   async generate(request, config = {}) {
