@@ -1,6 +1,7 @@
 import base64
 import io
 import os
+import threading
 import torch
 
 from fastapi import FastAPI, HTTPException
@@ -40,6 +41,8 @@ if hasattr(pipe, "enable_attention_slicing"):
 
 print("Pipeline loaded successfully.")
 
+gpu_lock = threading.Lock()
+
 
 class GenerateRequest(BaseModel):
     model_config = {"extra": "ignore"}
@@ -74,24 +77,25 @@ def generate(req: GenerateRequest):
     guidance = max(1.0, min(20.0, float(req.guidance_scale)))
 
     try:
-        generator = torch.Generator(device=device).manual_seed(safe_seed)
+        with gpu_lock:
+            generator = torch.Generator(device=device).manual_seed(safe_seed)
 
-        with torch.inference_mode():
-            result = pipe(
-                prompt=req.prompt,
-                negative_prompt=req.negative_prompt or None,
-                width=width,
-                height=height,
-                num_inference_steps=steps,
-                guidance_scale=guidance,
-                generator=generator,
-            )
+            with torch.inference_mode():
+                result = pipe(
+                    prompt=req.prompt,
+                    negative_prompt=req.negative_prompt or None,
+                    width=width,
+                    height=height,
+                    num_inference_steps=steps,
+                    guidance_scale=guidance,
+                    generator=generator,
+                )
 
-        image = result.images[0]
-        buffer = io.BytesIO()
-        image.save(buffer, format="PNG")
+            image = result.images[0]
+            buffer = io.BytesIO()
+            image.save(buffer, format="PNG")
 
-        encoded = base64.b64encode(buffer.getvalue()).decode("utf-8")
+            encoded = base64.b64encode(buffer.getvalue()).decode("utf-8")
 
         return {
             "imageBase64": encoded,
